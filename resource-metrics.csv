@@ -1,0 +1,3 @@
+Time,Num,AvgCPU,AvgMEM,AvgNetI,AvgNetO,vis-lab_legacywebshop_1-CPU,vis-lab_legacywebshop_1-mem,vis-lab_legacywebshop_1-netI,vis-lab_legacywebshop_1-netO,vis-lab_web-shop-db-image_1-CPU,vis-lab_web-shop-db-image_1-mem,vis-lab_web-shop-db-image_1-netI,vis-lab_web-shop-db-image_1-netO
+13:03:09,2,0.23,2.75,1009000,2644000,0.28,5.17,1340000.000,4800000.000,0.17,0.34,678000.000,488000.000
+13:03:20,4,0.23,2.75,1009000,2644000,0.28,5.17,1340000.000,4800000.000,0.17,0.34,678000.000,488000.000,0.26,5.17,1340000.000,4800000.000,0.19,0.34,678000.000,488000.000

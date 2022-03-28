@@ -1,0 +1,17 @@
+.idea
+node_modules/
+eth-python-client/venv
+eth-client-js/results/*
+__pycache__
+eth-client/node_modules
+data/
+package-lock.json
+.node-*
+msp/
+vendor/
+log.txt
+*vscode*
+driver
+*.o
+tmp
+env
