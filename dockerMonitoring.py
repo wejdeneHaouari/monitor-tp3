@@ -72,6 +72,7 @@ class DockerMonitoring(Monitoring):
 
 
         num = len(self.cpus)
+        print("number ", num)
         self.avg_cpu = sum(self.cpus) / num if num > 0 else -1
         self.avg_mem = sum(self.memories) / num if num > 0 else -1
         self.avg_net_i = sum(self.net_is) / num if num > 0 else -1
@@ -86,19 +87,23 @@ class DockerMonitoring(Monitoring):
             "containers": []
         }
 
-        for i in range(len(self.names)):
-            data["containers"].append({
-                "name": self.names[i],
-                "cpu": self.cpus[i],
-                "mem": self.memories[i],
-                "netI": self.net_is[i],
-                "netO": self.net_os[i]
-            })
+        # for i in range(len(self.names)):
+        #     data["containers"].append({
+        #         "name": self.names[i],
+        #         "cpu": self.cpus[i],
+        #         "mem": self.memories[i],
+        #         "netI": self.net_is[i],
+        #         "netO": self.net_os[i]
+        #     })
 
 
 
         self.writeToFile(num, self.avg_cpu, self.avg_mem, self.avg_net_i, self.avg_net_o,
                          self.cpus, self.memories, self.net_is, self.net_os)
+        self.cpus = []
+        self.memories = []
+        self.net_is = []
+        self.net_os = []
 
     def writeToFile(self, num, avg_cpu, avg_mem, avg_net_i, avg_net_o, cpus, memories, net_is, net_os):
         log_file = open(self.settings.log_monitor_file, "a")
